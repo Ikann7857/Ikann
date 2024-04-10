@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="myVideo" width="100%" controls>
+  <source src="ssstik.io_1712624979937.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<script>
+// Dapatkan elemen video
+var vid = document.getElementById("myVideo");
+
+// Saat video diklik, buka dalam mode layar penuh
+vid.onclick = function() {
+  if (vid.requestFullscreen) {
+    vid.requestFullscreen();
+  } else if (vid.mozRequestFullScreen) { /* Firefox */
+    vid.mozRequestFullScreen();
+  } else if (vid.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    vid.webkitRequestFullscreen();
+  } else if (vid.msRequestFullscreen) { /* IE/Edge */
+    vid.msRequestFullscreen();
+  }
+}
+</script>
+
+</body>
+</html>
